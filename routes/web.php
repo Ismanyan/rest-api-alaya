@@ -17,11 +17,6 @@ $router->post(
     ]
 );
 
-$router->get('users', function() {
-    $users = \App\User::all();
-    return response()->json($users);
-});
-
 $router->post('auth/regist/{token}', 'AuthController@regist');
 
 $router->group(
